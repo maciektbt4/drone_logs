@@ -1,0 +1,12 @@
+name: drone_logs_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - plotly
+  - python-kaleido       # export PDF/PNG
+  - dash                 # dashboard web
+  - jupyter              # notebooks in VS Code

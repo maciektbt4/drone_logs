@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.env
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dane i wyniki
+data/
+input/
+output/
+
+# System
+.DS_Store
+Thumbs.db
