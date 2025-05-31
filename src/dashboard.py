@@ -45,7 +45,7 @@ def layout_for_run(run_name: str):
 
     # ─── 2.3) Metryki globalne ────────────────────────────────────────
     total_time_hours   = df_all["t"].sum() / 3600
-    total_best_success = int((df_best["Reward"] >= 100).sum())
+    total_best_success = int((df_best["Reward"] >= 50).sum())
 
     # ─── 2.4) Dane blokowe (co 10 000 kroków) ────────────────────────
     block_size = 10_000
@@ -58,7 +58,7 @@ def layout_for_run(run_name: str):
     )
 
     successes_per_block = (
-        df_all.assign(success=(df_all["Reward"] >= 100))
+        df_all.assign(success=(df_all["Reward"] >= 50))
               .groupby("Step_block")["success"]
               .sum()
               .reset_index(name="successes")
